@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Courses</title>
+</head>
+
+<body>
+
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <div class="flex items-center">
+                <img data-aos="zoom-in" src="images/apnipathsala.png" class="w-32 pb-4" alt="">
+            </div>
+            <div class="flex md:order-1">
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                    aria-expanded="false"
+                    class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar"
+                        class="block p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg outline-none w-96 bg-gray-50 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search...">
+                </div>
+                <button data-collapse-toggle="navbar-search" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-2" id="navbar-search">
+                <div class="relative mt-3 md:hidden">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar"
+                        class="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search...">
+                </div>
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-2 pr-4 mt-2 text-lg text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            aria-current="page">Courses</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-2 pr-4 mt-2 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Intership</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-2 pr-4 mt-2 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Job</a>
+                    </li>
+                    <li>
+                        <div class="flex items-end justify-end pl-16">
+                            <button class="p-1 pl-2 pr-2 mb-1 ml-8 text-lg text-white bg-blue-900 rounded-lg">Sign
+                                Up</button>
+                            <button class="p-1 pl-2 pr-2 mb-1 ml-8 text-lg rounded-lg ">Sign In</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flex flex-col-reverse h-auto lg:flex-row bg-[url(images/gif.GIF)] bg-no-repeat	bg-cover">
+
+        <div class="flex flex-col items-center justify-center p-6 text-white md:w-full ">
+            <h1 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                class="text-4xl font-bold md:text-5xl md:mt-16">Web Automation Using Selenium Community Class</h1>
+            <p class="mt-8 tracking-wide text-md md:text-lg md:mb-20">In this course you will learn automation testing
+                using Selenium. Selenium is one of
+                the testing suite which has different components Selenium WebDriver, Selenium IDE, Selenium Grid. During
+                this course, you will learn how to automate web application using Selenium 4. You can automate Smoke
+                test,Regression test and end to end test cases.</p>
+        </div>
+        <div class="flex flex-col items-center w-1/3 mx-auto">
+            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
+                <iframe src="https://www.youtube.com/embed/UBOj6rqRUME" frameborder="0" allowfullscreen
+                    class="absolute top-0 left-0 w-full h-full"></iframe>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section class="flex flex-col-reverse justify-center lg:flex-row pt-28 bg-slate-300">
+        <div data-aos="fade-up-right">
+            <div class="p-10 m-6 bg-white shadow-2xl rounded-2xl ">
+                <h1 class="pb-5 mr-6 text-3xl font-bold text-blue-900">What You'll Learn</h1>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Getting Started With
+                    Automation Testing - Orientation Program
+                </p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Roadmap to learn
+                    Automation Testing</p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Different tools for
+                    automation in each category</p>
+                <p class="font-semibold"><i class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Web
+                    Automation using Selenium</p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Interacting with Web
+                    Elements</p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Automating Web
+                    Application End-to-End Scenarios Using Selenium
+                </p>
+            </div>
+            <div class="p-10 m-6 bg-white shadow-2xl rounded-2xl">
+                <h1 class="pb-5 text-3xl font-bold text-blue-900">Requirement</h1>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>System with Internet
+                    Connection</p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Interest to learn</p>
+                <p class="font-semibold"><i
+                        class="p-2 mt-1 font-bold text-orange-600 fa-solid fa-arrow-right"></i>Dedication</p>
+            </div>
+        </div>
+        <div data-aos="fade-up-left" class="p-10  m-6 bg-white shadow-2xl rounded-2xl lg:w-96 ">
+            <h1 class="text-3xl font-bold text-blue-900 mb-2">FREE</h1>
+            <a href="" class=" pl-16 pr-16 pt-1 pb-1  text-lg text-center text-white bg-blue-900 rounded-lg">Enroll
+                Now</a>
+            <h3 class="mt-4 text-xl font-bold text-blue-900">Class Details</h3>
+            <div class="flex mt-4">
+                <div class="p-2 text-xl text-orange-600">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+                <div>
+                    <h6 class="ml-3 font-bold text-blue-900">Start date</h6>
+                    <p style="margin-left: .7rem;">20th September</p>
+                </div>
+            </div>
+            <div class="flex mt-4">
+                <div class="p-2 text-xl text-orange-600 ">
+                    <i class="fa-solid fa-business-time"></i>
+                </div>
+                <div>
+                    <h6 class="ml-1 font-bold text-blue-900">Class Timings:</h6>
+                    <p class="mr-6" style="margin-left: .7rem;">7PM - 8PM IST</p>
+                </div>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-blue-900">Courses Features</h3>
+            <p class="font-semibold"><i class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Course
+                material</p>
+            <p class="font-semibold"><i class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Course
+                resources</p>
+            <p class="font-semibold"><i class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>On
+                demand recorded videos</p>
+            <p class="font-semibold"><i
+                    class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Practical exercises</p>
+            <p class="font-semibold"><i
+                    class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Quizzes</p>
+            <p class="font-semibold"><i
+                    class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Assignments</p>
+            <p class="font-semibold"><i class="p-2 mt-1 font-bold text-orange-600 fa-regular fa-circle-check"></i>Course
+                completion certificate</p>
+        </div>
+    </section>
+
+    <section class="flex  justify-center pt-10  lg:flex-row bg-slate-300">
+        <div>
+            <div data-aos="zoom-in-up"
+                class="p-10 m-6 bg-white shadow-2xl  rounded-2xl lg:w-4/5 md:w-full lg:relative left-24 ">
+                <h1 class="pb-5 text-3xl font-bold text-blue-900">Course Curriculum</h1>
+                <div id="accordion-collapse" data-accordion="collapse">
+                    <h2 id="accordion-collapse-heading-1">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left text-black bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-gray-800 dark:text-white"
+                            data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                            aria-controls="accordion-collapse-body-1">
+                            <span>DAY 1</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-1" class="" aria-labelledby="accordion-collapse-heading-1">
+                        <div
+                            class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p class="mb-2 font-semibold text-black ">Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Atque ratione eaque sunt aliquam! Harum voluptates dolore doloremque
+                                quibusdam assumenda cupiditate, quisquam voluptatum labore incidunt consectetur?</p>
+
+
+                        </div>
+                    </div>
+                    <h2 id="accordion-collapse-heading-2">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 text-bl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                            aria-controls="accordion-collapse-body-2">
+                            <span class="text-black">DAY 2</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                        <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+                            <p class="mb-2 font-semibold text-black">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                elit. Itaque facere corrupti, libero dolore voluptates iste possimus nobis atque totam
+                                eligendi?</p>
+
+                        </div>
+                    </div>
+                    <h2 id="accordion-collapse-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium text-left text-black border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                            aria-controls="accordion-collapse-body-3">
+                            <span>DAY 3</span>
+                            <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                        <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                            <p class="mb-2 font-semibold text-black ">Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Eius dolores odit accusantium porro ipsam, rem quibusdam eum natus
+                                quas? Saepe, maxime totam! Provident odio possimus incidunt, beatae ab iusto
+                                repellendus?</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-in-up"
+                class="flex p-10 m-6 bg-white shadow-2xl rounded-2xl lg:w-4/5 md:w-full lg:relative left-24">
+                <div>
+                    <h1 class="text-3xl font-bold text-blue-900">Shivan Kumar</h1>
+                    <p class="mt-2">Myself Shivan Kumar having 10 years of experience in Automation Testing and worked
+                        with Dell
+                        International and SAP Labs India. I am also passionate teacher, mentor,have been into teaching
+                        for 8
+                        years now and running a YouTube channel with 137000 subscribers and 480+ videos on different
+                        tools and
+                        libraries.</p>
+                </div>
+                <div>
+                    <img class="w-2/3 mt-12 ml-24 rounded-3xl" src="images/shivan.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="flex flex-col justify-around mt-16 mb-16 md:flex-row ">
+            <div class="mt-6 ml-16">
+                <img data-aos="zoom-in-up" class="w-32 pb-4" src="images/apnipathsala.png" alt="">
+            </div>
+            <div class="mt-6 ml-16">
+                <h3 data-aos="zoom-out" class="mb-4 text-xl font-semibold text-blue-900">Explore</h3>
+                <a href="">
+                    <p data-aos="fade-right">Projects</p>
+                </a>
+                <a href="">
+                    <p data-aos="fade-right">Programs</p>
+                </a>
+                <a href="">
+                    <p data-aos="fade-right">Mentors</p>
+                </a>
+                <a href="">
+                    <p data-aos="fade-right">Internship</p>
+                </a>
+            </div>
+            <div class="mt-6 ml-16">
+                <h3 data-aos="zoom-out" class="mb-4 text-xl font-semibold text-blue-900">Company</h3>
+                <a href="">
+                    <p data-aos="fade-left">About Us</p>
+                </a>
+                <a href="">
+                    <p data-aos="fade-left">FAQ ' S</p>
+                </a>
+            </div>
+            <div class="mt-6 ml-16">
+                <h3 data-aos="zoom-out" class="mb-4 text-xl font-semibold text-blue-900">Follow Us</h3>
+                <a href=""><i class="p-1 text-xl text-blue-900 fa-brands fa-facebook"></i></a>
+                <a href=""><i class="p-1 text-xl text-blue-900 fa-brands fa-twitter"></i></a>
+                <a href=""><i class="p-1 text-xl text-blue-900 fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="flex justify-center m-4 font-semibold">
+            <p>© 2022 Company Co. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+
+</html>
